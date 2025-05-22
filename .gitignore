@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Vite build output
+client/dist/
+
+# Environment variables file (we'll create this later)
+.env
+server/.env
+client/.env
+
+# IDE / OS specific
+.vscode/
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
