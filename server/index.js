@@ -35,15 +35,15 @@ io.on('connection', (socket) => {
   });
 });
 
+// Export io for use in other modules
+app.set('io', io);
+
 // Make io available to routes
 const teamSyncRoutes = require('./routes/api/teamSyncRoutes');
 app.use('/api/teamsync', teamSyncRoutes);
 
 const { router: notificationRoutes } = require('./routes/api/notificationRoutes');
 app.use('/api/notifications', notificationRoutes);
-
-// Export io for use in other modules
-app.set('io', io);
 
 // --- Middleware ---
 app.use(cors());
